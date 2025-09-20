@@ -1,0 +1,34 @@
+#content{
+    width: 75%;
+    margin: 0 auto;
+}
+
+img {
+    width: 20%;
+    display: block;
+    margin:0 auto;
+    padding-top: 20px;
+}
+.norm {
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+}
+h1 {
+    text-align: center;
+}
+
+#uni-title{
+    color: blue;
+    text-align: center;
+}
+
+#method {
+    font-style: italic;
+    width: 40%;
+    margin: 0 auto;
+}
+
+hr{
+    width: 40%;
+}
