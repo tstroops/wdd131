@@ -29,5 +29,5 @@ selectElem.addEventListener('change', function(){
 })
 
 const image = document.querySelector('img')
-image.setAttribute(src, html-css-js.webp)
+image.setAttribute(src, images/html-css-js.webp)
 image.setAttribute(alt, "html css js logo")
