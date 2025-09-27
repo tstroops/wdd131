@@ -28,6 +28,7 @@ selectElem.addEventListener('change', function(){
     let highlight = document.getElementById(codeValue).style.color = 'red';
 })
 
-const image = document.querySelector('img')
+const image = document.querySelector("img")
 image.setAttribute(src, "images/html-css-js.webp")
 image.setAttribute(alt, "html css js logo")
+document.body.style.backgroundColor = "lightblue"
