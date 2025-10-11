@@ -75,6 +75,9 @@ footer {
     .hide{
         display: inline;
     }
+    a {
+        display: inline;
+    }
 
     .menu-btn{
     display: none;

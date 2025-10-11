@@ -16,8 +16,17 @@ main{
     display: grid;
 }
 
-.big{
-    display: none;
+.close{
+    position: absolute;
+    top: 5vh;
+    right: 2vh;
+    font-size: 2em;
+}
+
+dialog{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(64,64,64,0.8);
 }
 
 img{
@@ -31,6 +40,19 @@ img{
     border-width: 5px;
 }
 
+dialog img{
+    object-fit: initial;
+    width: 90%;
+    height: 40%;
+    border: none;   
+    display: block;
+    margin: 20vh auto;
+}
+
+.hide {
+    display: none;
+}
+
 main h2{
     padding-top: 10px;
 }
@@ -39,6 +61,10 @@ main h2{
     #pic-grid{
         grid-template-columns: 1fr 1fr;
     }
+    dialog img{
+        height: 60%;
+    }
+
 }
 
 @media screen and (min-width: 1000px){
@@ -48,10 +74,14 @@ main h2{
     .smol{
         display: none;
     }
-    .big{
+    .hide {
         display: inline;
     }
     a {
         text-decoration: underline;
     }
+    dialog img{
+        height: 70%;
+    }
+
 }
