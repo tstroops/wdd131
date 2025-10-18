@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+}
+
+nav{
+    text-align: right;
+}
+nav a{
+    padding: 0 5px;
+    text-decoration: none;
+    color:black;
+}
+
+.book-id{
+    border-top: 2px solid darkred;
+    text-align: right;
+}
+
+@media (min-width: 700px) {
+    .book-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .book-id{
+        grid-column: 0,1;
+    }
+}
