@@ -53,8 +53,7 @@ const students = [
 students.forEach(function(item){
     let name = document.createElement('div');
 
-    let html = 
-    `<span>${item.first}</span><span>${item.last}</span>`;
+    let html = `<span>${item.first}</span><span>${item.last}</span>`;
 
     name.innerHTML = html;
     container.appendChild(name)
