@@ -9,7 +9,7 @@ let myList = document.querySelector('#myList');
 const stepsHtml = steps.map(listTemplate);
 
 function listTemplate(item){
-    return '<li>${item}</li>';
+    return `<li>${item}</li>`;
 }
 
 console.log(stepsHtml)
@@ -54,7 +54,7 @@ students.forEach(function(item){
     let name = document.createElement('div');
 
     let html = 
-    '<span>${item.first}</span><span>${item.last}</span>';
+    `<span>${item.first}</span><span>${item.last}</span>`;
 
     name.innerHTML = html;
     container.appendChild(name)
