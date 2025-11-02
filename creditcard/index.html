@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="icon" href="cred-card.png">
+    <link rel="stylesheet" href="creditcard.css"/>
+  </head>
+  <body>
+    <main>
+      <section class="errors"></section>
+      <form id="creditCardForm" action="#" method="get">
+
+        <!-- Container for credit card details -->
+        <div id="cardFront" role="region" aria-labelledby="creditCardLabel">
+            <h1>Total: $199</h1>
+            <span>💳</span>
+            <div id="cardLabel">
+                <label id="creditCardLabel" for="creditCardNumber">Credit Card Number:</label>
+                <input
+                type="text"
+                id="creditCardNumber"
+                name="creditCardNumber"
+                pattern="[0-9]{16}"
+                placeholder="Enter 16 digits"
+                required
+                />
+            </div>
+            <div id="holder">
+                <label for="cardHolder">Card Holder</label>
+                <input
+                type="text"
+                id="cardHolder"
+                name="cardHolder"
+                placeholder="John Doe"
+                required>
+            </div>
+            <div id="expire">
+                <label for="expirationDate">Expiration</label>
+                <input 
+                type="text" 
+                id="month" 
+                name="expMonth" 
+                placeholder="MM" 
+                aria-labelledby="expirationDate"
+                required>
+                <input 
+                type="text" 
+                id="year" 
+                name="expYear" 
+                placeholder="YY" 
+                aria-labelledby="expirationDate"
+                required>
+            </div>
+        </div>
+        <div id="cardBack">
+            <div id="blackStrip">
+
+            </div>
+            <div id="threeDigit">
+                <label for="CVC/CVV">CVC/CVV</label>
+                <input
+                type="text"
+                id="CVC/CVV"
+                name="CVC/CVV"
+                pattern="[0-9]{3}"
+                placeholder="999"
+                required>
+            </div>
+        </div>
+      
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+      <script src="creditcard.js"></script>
+</html>
