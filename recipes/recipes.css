@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+.sm{
+    width: 40px;
+    height: 40px;
+}
+#description{
+    display: none;
+}
+#logo{
+    display: flex;
+    flex: 0 1 120px;
+    justify-content: center;
+}
+#logo img{
+    max-width: 120px;
+    max-height: 120px;
+}
+#logo h1{
+    font-size: 80px;
+}
+#food-name{
+    font-family: "Amatic SC", sans-serif;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    width: 90%;
+    border: none;
+}
+#search-img{
+    width: 10px;
+    height: 10px;
+}
+#search-bar{
+    border: 1px solid black;
+    border-radius: 2px;
+    display: flex;
+    flex: 1 1 10px;
+    justify-content: center;
+}
+#recipe{
+    border: 1px solid black;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#recipe-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+main{
+    margin: 10px 0;
+}
+#tag{
+    max-width: 80px;
+    max-height: 40px;
+}
+@media screen and (min-width: 1000px) {
+    footer{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    #description{
+        display: inline;
+    }
+    #recipe{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
