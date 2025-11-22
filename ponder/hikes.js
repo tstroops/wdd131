@@ -148,5 +148,5 @@ function search(){
 function init() {
     renderHike(hikes[randomNum]);
 }
-
+btn.addEventListener('click', search);
 init();

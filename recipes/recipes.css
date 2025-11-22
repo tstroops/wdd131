@@ -33,7 +33,7 @@ footer{
     align-items: center;
 }
 input{
-    width: 90%;
+    width: 100%;
     border: none;
 }
 #search-img{
@@ -46,6 +46,8 @@ input{
     display: flex;
     flex: 1 1 10px;
     justify-content: center;
+    width: 60%;
+    margin: 0 auto;
 }
 #recipe{
     border: 1px solid black;
@@ -74,7 +76,7 @@ main{
     #description{
         display: inline;
     }
-    #recipe{
+    #recipe-card{
         flex-direction: row;
         flex-wrap: nowrap;
     }
