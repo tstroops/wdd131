@@ -11,7 +11,7 @@ header{
 }
 hr{
   height: 2px;
-  background-color: #ef27a6;
+  background-color: #396e94;
   border-width: 2px;
   border-color: #396e94;
 }
@@ -20,6 +20,15 @@ h1{
     text-align: center;
     margin: 0;
     font-family: Metamorphous, "Eagle Lake";
+}
+h2, h3{
+  padding-left: 10px;
+}
+img{
+  display: block;
+  width: 250px;
+  height: 375px;
+  margin: 0 auto;
 }
 button {
     /*
@@ -31,7 +40,7 @@ button {
     margin: 15px;
     border: none;
     border-radius: 8px;
-    background-color: #ef27a6;
+    background-color: #396e94;
     color: white;
     font-weight: 550;
     cursor: pointer;
@@ -41,12 +50,14 @@ button {
   }
   #stat-card{
     background-color: #381d2a;
-  }
-  #enemy-card{
     color: #ef27a6;
   }
-  #user-stats{
-    color: #396e94;
+  #enemy-card{
+    text-align: center;
+    padding: 0;
+  }
+  #name{
+    padding-top: 15px;
   }
   body{
     background-color: #396e94;

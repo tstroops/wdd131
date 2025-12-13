@@ -4,30 +4,36 @@
 const enemies = [
     {
         name:"Amgy Dragon",
-        hp:200,
-        defense: 20,
-        resistance: 10,
+        imgSrc:"images/rsz_amgy-dragon",
+        maxHP:20,
+        hp:20,
+        defense: 2,
+        resistance: 1,
         regen:0
     },
     {
         name:"Amgy Drake",
-        hp:500,
-        defense:80,
-        resistance:25,
+        imgSrc:"images/",
+        maxHP:50,
+        hp:50,
+        defense:8,
+        resistance:3,
         regen:0
     },
     {
         name:"Amgy Wyrm",
-        hp:250,
-        defense:50,
-        resistance: 50,
-        regen:50
+        maxHP:20,
+        hp:25,
+        defense:0,
+        resistance: 5,
+        regen:5
     },
     {
         name:"Amgy Drakon",
-        hp:400,
-        defense:50,
-        resistance:20,
+        maxHP:20,
+        hp:40,
+        defense:5,
+        resistance:2,
         regen:0
     }
 ]
@@ -47,29 +53,63 @@ let userStats=document.querySelector("#user-stats");
 /*other variables*/
 let level=0;
 let str=10;
-let intelligence=10;
+let int=10;
 let xp=0;
+let randIndex=Math.floor(Math.random()*enemies.length);
+
+function randomize(){
+    randIndex=Math.floor(Math.random()*enemies.length);
+}
 
 /*initialize function */
-function init(){
-    let index=Math.floor(Math.random()*enemies.length)
-    let amgy=enemies[index];
+function init(randIndex){
+    let amgy=enemies[randIndex];
 
     //enemy initialization
     enemyCard.innerHTML=`
-    <img id="image">
-    <h1 id="name">${amgy.name}</h1>
-    <h2 id="hp">HP: ${amgy.hp}</h2>
-    <h2 id="def">Defense: ${amgy.defense}</h2>
-    <h2 id="res">Resistance: ${amgy.resistance}</h2>
-    <h2 id="regen">Regeneration: ${amgy.regen}</h2>
+    <h2 id="name">${amgy.name}</h2>
+    <img id="image" src="images/rsz_amgy-dragon.png" alt="an angry dragon">
+    <h3>HP: ${amgy.hp} | Regeneration: ${amgy.regen}</h3>
+    <h3>Defense: ${amgy.defense} | Resistance: ${amgy.resistance}</h3>
     `;
 
     userStats.innerHTML=`
-    <h2 id="char-lvl">Level: ${level}</h2>
-    <h2 id="xp">XP: ${0}</h2>
-    <h2 id="char-str">Strength: ${str}</h2>
-    <h2 id="char-int">Intelligence: ${intelligence}</h2>
+    <h3>Level: ${level} | XP: ${xp}</h3>
+    <h3>Strength: ${str} | Intelligence${int}</h3>
     `;
 };
-init();
+
+
+
+levelUp.addEventListener("click", function(){
+    level++;
+    console.log("level up");
+    init(randIndex);
+})
+
+//arrow function was ai to help with bug fix
+//I don't know if there's a more effective way
+attack.addEventListener("click", ()=>damageCalc(false));
+magic.addEventListener("click", ()=>damageCalc(true));
+
+function damageCalc(isMagic){
+    if(isMagic){
+        console.log("magic attack");
+        let damage = int-enemies[randIndex].resistance-enemies[randIndex].regen;
+        enemies[randIndex].hp-=damage;
+    }
+    else{
+        console.log("attack");
+        let damage = str - enemies[randIndex].defense - enemies[randIndex].regen;
+        enemies[randIndex].hp -= damage;
+    }
+    if (enemies[randIndex].hp<=0){
+        enemies[randIndex].hp=enemies[randIndex].maxHP;
+        xp+=100;
+        randomize();
+        init(randIndex);
+    }
+    init(randIndex);
+}
+
+init(randIndex);
