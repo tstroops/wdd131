@@ -4,7 +4,8 @@
 const enemies = [
     {
         name:"Amgy Dragon",
-        imgSrc:"images/rsz_amgy-dragon",
+        imgSrc:"images/rsz_amgy-dragon.png",
+        imgAlt:"A big angry dragon.",
         maxHP:20,
         hp:20,
         defense: 2,
@@ -13,7 +14,8 @@ const enemies = [
     },
     {
         name:"Amgy Drake",
-        imgSrc:"images/",
+        imgSrc:"images/rsz_amgy-drake.png",
+        imgAlt: "a giant angry lizard",
         maxHP:50,
         hp:50,
         defense:8,
@@ -22,6 +24,8 @@ const enemies = [
     },
     {
         name:"Amgy Wyrm",
+        imgSrc:"images/rsz_amgy-wyrm.png",
+        imgAlt:"a giant angry snake",
         maxHP:20,
         hp:25,
         defense:0,
@@ -30,6 +34,8 @@ const enemies = [
     },
     {
         name:"Amgy Drakon",
+        imgSrc:"images/rsz_amgy-drakon.png",
+        imgAlt: "an angry red dragon",
         maxHP:20,
         hp:40,
         defense:5,
@@ -68,7 +74,7 @@ function init(randIndex){
     //enemy initialization
     enemyCard.innerHTML=`
     <h2 id="name">${amgy.name}</h2>
-    <img id="image" src="images/rsz_amgy-dragon.png" alt="an angry dragon">
+    <img id="image" src=${amgy.imgSrc} alt=${amgy.imgAlt}">
     <h3>HP: ${amgy.hp} | Regeneration: ${amgy.regen}</h3>
     <h3>Defense: ${amgy.defense} | Resistance: ${amgy.resistance}</h3>
     `;

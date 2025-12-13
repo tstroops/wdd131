@@ -64,6 +64,13 @@ button {
     margin: 0;
     padding: 0;
   }
+  #launch-link{
+    text-decoration: none;
+    color: white;
+  }
+  #launcher{
+    background-color: #381d2a;
+  }
 
   @media screen and (min-width: 600px ){
     #stat-card{
