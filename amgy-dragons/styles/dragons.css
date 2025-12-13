@@ -5,9 +5,11 @@
     width: 150px;
     height: 150px;
     margin: 0 auto;
+    border: none;
 }
 header{
     background-color: white;
+    padding-bottom: 20px;
 }
 hr{
   height: 2px;
@@ -25,6 +27,7 @@ h2, h3{
   padding-left: 10px;
 }
 img{
+  border: 2px, solid, #396e94;
   display: block;
   width: 250px;
   height: 375px;
@@ -64,13 +67,40 @@ button {
     margin: 0;
     padding: 0;
   }
+
+
   #launch-link{
     text-decoration: none;
     color: white;
   }
   #launcher{
     background-color: #381d2a;
+    width: 150px;
+    height: 75px;
   }
+  #launcher-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  #launch-grid{
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+  #dragon-one{
+    grid-column: 1 / 2;
+  }
+  #dragon-two{
+    grid-column: 3 / 4;
+  }
+  .dragon-hero{
+    border-color: #ef27a6;
+  }
+
 
   @media screen and (min-width: 600px ){
     #stat-card{

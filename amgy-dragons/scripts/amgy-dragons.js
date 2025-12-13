@@ -67,6 +67,11 @@ function randomize(){
     randIndex=Math.floor(Math.random()*enemies.length);
 }
 
+function scale(enemy){
+    enemy.maxHP+=2;
+    enemy.hp=enemy.maxHP;
+}
+
 /*initialize function */
 function init(randIndex){
     let amgy=enemies[randIndex];
@@ -86,11 +91,12 @@ function init(randIndex){
 };
 
 
-
+//level up function
 levelUp.addEventListener("click", function(){
     if (xp >= 100){
         level++;
         xp-=100;
+        enemies.forEach(scale);
         if(level%2 == 0){
             int++;
         }
