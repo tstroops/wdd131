@@ -82,8 +82,16 @@ function init(randIndex){
 
 
 levelUp.addEventListener("click", function(){
-    level++;
-    console.log("level up");
+    if (xp >= 100){
+        level++;
+        xp-=100;
+        if(level%2 == 0){
+            int++;
+        }
+        else{
+            str++;
+        }
+    }
     init(randIndex);
 })
 
